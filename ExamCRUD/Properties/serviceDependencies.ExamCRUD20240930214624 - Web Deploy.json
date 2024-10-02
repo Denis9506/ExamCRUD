@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/ExamCRUD20240930214624/providers/Microsoft.ServiceLinker/linkers/VaultUri_467F3D2ECB",
+      "secretStore": null,
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.KeyVault/vaults/ExamCRUDvault",
+      "type": "secrets.keyVault",
+      "connectionId": "VaultUri"
+    },
+    "storage1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/ExamCRUD20240930214624/providers/Microsoft.ServiceLinker/linkers/StorageAccount_D170FC9A74, /subscriptions/17c5def8-489b-49b2-84d2-fafd40a5887e/resourcegroups/EastUs/providers/Microsoft.Web/sites/ExamCRUD20240930214624/providers/Microsoft.ServiceLinker/linkers/StorageAccount_07907C1637",
+      "secretStore": "AzureKeyVault",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/azureteacherstudents",
+      "type": "storage.azure",
+      "connectionId": "StorageAccount"
+    }
+  }
+}

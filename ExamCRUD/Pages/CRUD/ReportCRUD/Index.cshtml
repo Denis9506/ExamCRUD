@@ -1,0 +1,36 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Reports";
+}
+
+<h2>Reports</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Published Date</th>
+            <th>Author</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var report in Model.Reports)
+        {
+            <tr>
+                <td>@report.Title</td>
+                <td>@report.Description</td>
+                <td>@report.PublishedDate</td>
+                <td>@report.Author.NickName</td>
+                <td>
+                    <a asp-page="./Edit" asp-route-rowKey="@report.Author.RowKey">Edit</a>
+                    <a asp-page="./Delete" asp-route-rowKey="@report.Author.RowKey">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-page="./Create" class="btn btn-primary">Create New Author</a>

@@ -1,0 +1,26 @@
+﻿@page
+@model CreateModel
+@{
+    ViewData["Title"] = "Create Author";
+}
+
+<h2>Create New Author</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="NickName">NickName</label>
+        <input type="text" class="form-control" id="NickName" asp-for="Author.NickName" />
+        <span asp-validation-for="Author.NickName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="Role">Role</label>
+        <select class="form-control" id="Role" asp-for="Author.Role">
+            <option value="Admin">Admin</option>
+            <option value="Editor">Editor</option>
+            <option value="Viewer">Viewer</option>
+        </select>
+        <span asp-validation-for="Author.Role" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a asp-page="./Index" class="btn btn-secondary">Back to List</a>
+</form>
