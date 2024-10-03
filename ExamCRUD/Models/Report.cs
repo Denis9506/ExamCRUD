@@ -20,7 +20,7 @@ namespace ExamCRUD.Model
         public string FileUrl { get; set; } = string.Empty;
 
         public string AuthorRowKey { get; set; } = string.Empty;
-
+        [NoFutureDate(ErrorMessage = "The published date cannot be in the future.")]
         public DateTime PublishedDate { get; set; } = DateTime.UtcNow;
 
         public string PartitionKey { get; set; }

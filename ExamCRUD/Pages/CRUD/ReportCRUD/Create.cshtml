@@ -37,6 +37,7 @@
     <div class="form-group">
         <label asp-for="Report.PublishedDate"></label>
         <input asp-for="Report.PublishedDate" class="form-control" value="@Model.PublishedDate.ToString("yyyy-MM-ddTHH:mm")" />
+        <span asp-validation-for="Report.PublishedDate" class="text-danger"></span>
     </div>
 
     <button type="submit" class="btn btn-primary">Create</button>
